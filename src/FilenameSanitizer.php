@@ -7,12 +7,12 @@ class FilenameSanitizer implements FilenameSanitizerInterface
     /**
      * @var array
      */
-    protected $illegalCharacters = [];
+    protected array $illegalCharacters = [];
 
     /**
      * @var string
      */
-    protected $filename;
+    protected string $filename;
 
     public function __construct(string $filename = '')
     {
@@ -67,13 +67,12 @@ class FilenameSanitizer implements FilenameSanitizerInterface
     /**
      * @return array
      */
-    public function getIllegalCharacters()
+    public function getIllegalCharacters(): array
     {
         return $this->illegalCharacters;
     }
 
     /**
-     * @param string $filename
      * @return $this
      */
     public function setFilename(string $filename)
@@ -86,7 +85,7 @@ class FilenameSanitizer implements FilenameSanitizerInterface
     /**
      * @return string
      */
-    public function getFilename()
+    public function getFilename(): string
     {
         return $this->filename;
     }

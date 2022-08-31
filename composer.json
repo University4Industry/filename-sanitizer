@@ -25,5 +25,10 @@
         "psr-4": { "IndieHD\\FilenameSanitizer\\": "src" }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    }
 }
