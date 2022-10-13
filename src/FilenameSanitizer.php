@@ -100,7 +100,7 @@ class FilenameSanitizer implements FilenameSanitizerInterface
      */
     public function stripPhp()
     {
-        $this->setFilename(filter_var($this->getFilename(), FILTER_SANITIZE_STRING));
+        $this->setFilename(strip_tags($this->getFilename()));
 
         return $this;
     }
@@ -118,7 +118,7 @@ class FilenameSanitizer implements FilenameSanitizerInterface
         ];
 
         $this->setFilename(
-            filter_var($this->getFilename(), FILTER_SANITIZE_STRING, $options)
+            filter_var($this->getFilename(), FILTER_SANITIZE_SPECIAL_CHARS, $options)
         );
 
         return $this;
